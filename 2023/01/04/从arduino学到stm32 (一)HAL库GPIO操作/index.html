@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="从arduino学到STM32（一）HAL库GPIO操作前言：Arduino无疑是入门最简单的mcu平台了（此处指传统的AVR板子比如UNO），只需要一点点C语言基础和亿点点耐心就好了。个人极度推荐B站太极创客团队的Arduino课程。他们的官网甚至给出了arduino基本的内置库函数参考手册，十分方便。但是使用arduino框架编写代码总会被人怀疑不够专业，遇到实时操作系统（RTOS）或者底层外">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2023/01/04/%E4%BB%8Earduino%E5%AD%A6%E5%88%B0stm32%20(%E4%B8%80)HAL%E5%BA%93GPIO%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="从arduino学到STM32（一）HAL库GPIO操作前言：Arduino无疑是入门最简单的mcu平台了（此处指传统的AVR板子比如UNO），只需要一点点C语言基础和亿点点耐心就好了。个人极度推荐B站太极创客团队的Arduino课程。他们的官网甚至给出了arduino基本的内置库函数参考手册，十分方便。但是使用arduino框架编写代码总会被人怀疑不够专业，遇到实时操作系统（RTOS）或者底层外">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-04T04:08:14.749Z">
+<meta property="article:modified_time" content="2023-01-04T04:24:07.154Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,101 +66,51 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/11/26/%E8%82%A5%E5%AE%85%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-  <time datetime="2023-11-26T09:12:52.000Z" itemprop="datePublished">Nov 26</time>
+        <section id="main"><article id="post-从arduino学到stm32 (一)HAL库GPIO操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/01/04/%E4%BB%8Earduino%E5%AD%A6%E5%88%B0stm32%20(%E4%B8%80)HAL%E5%BA%93GPIO%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2023-01-04T04:08:14.749Z" itemprop="datePublished">2023-01-04</time>
 </a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/11/26/%E8%82%A5%E5%AE%85%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/">肥宅博客测试</a>
-    </h1>
-  
-
-    </header>
+    
   </div>
-</article>
-  
+  <div class="article-inner">
     
     
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/01/04/%E4%BB%8Earduino%E5%AD%A6%E5%88%B0stm32%20(%E4%B8%80)HAL%E5%BA%93GPIO%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  <time datetime="2023-01-04T04:08:14.749Z" itemprop="datePublished">Jan 4</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-    </header>
-  </div>
-</article>
-  
-    
-    
-      
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/26/%E2%80%9C%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E2%80%9D/" class="archive-article-date">
-  <time datetime="2022-06-26T10:39:33.000Z" itemprop="datePublished">Jun 26</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/26/%E2%80%9C%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E2%80%9D/">“自我介绍”</a>
-    </h1>
-  
+        <h1 id="从arduino学到STM32（一）HAL库GPIO操作"><a href="#从arduino学到STM32（一）HAL库GPIO操作" class="headerlink" title="从arduino学到STM32（一）HAL库GPIO操作"></a>从arduino学到STM32（一）HAL库GPIO操作</h1><h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>Arduino无疑是入门最简单的mcu平台了（此处指传统的AVR板子比如UNO），只需要一点点C语言基础和亿点点耐心就好了。个人极度推荐B站<a target="_blank" rel="noopener" href="http://www.taichi-maker.com/">太极创客团队</a>的Arduino课程。他们的官网甚至给出了arduino基本的内置库函数参考手册，十分方便。<br>但是使用arduino框架编写代码总会被人怀疑不够专业，遇到实时操作系统（RTOS）或者底层外设（例如TIMF定时器）的使用，寄存器读写时候有些力不从心。比如说avr的快速PWM功能貌似arduino就没有支持。还有一个大问题那就是价格，2020之后avr芯片的价格大涨，裸芯片7 8 9 元的atmega328p（arduino uno，nano，pro mini板子主控芯片）芯片属实痛苦，这个价格不如买个5元的STM32来用用。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2022/06/26/article-title/" class="archive-article-date">
-  <time datetime="2022-06-26T09:18:59.000Z" itemprop="datePublished">Jun 26</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2022/06/26/article-title/">article title</a>
-    </h1>
-  
-
-    </header>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/04/%E4%BB%8Earduino%E5%AD%A6%E5%88%B0stm32%20(%E4%B8%80)HAL%E5%BA%93GPIO%E6%93%8D%E4%BD%9C/" data-id="clpf9px2q0001hgu6180qg3l6" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/26/%E8%82%A5%E5%AE%85%E5%8D%9A%E5%AE%A2%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          肥宅博客测试
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2022/06/26/%E2%80%9C%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D%E2%80%9D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">“自我介绍”</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
