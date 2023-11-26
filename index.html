@@ -28,6 +28,31 @@
 
 <meta name="generator" content="Hexo 5.4.2"></head>
 
+
+<script>
+    // 初始化剩余次数
+    let remainingPopups = 100;
+
+    // 定义弹窗函数
+    function showPopup() {
+        // 显示弹窗
+        alert(`剩余弹窗次数：${remainingPopups}`);
+
+        // 减少剩余次数
+        remainingPopups--;
+
+        // 检查是否还有剩余次数
+        if (remainingPopups > 0) {
+            // 延时调用自身，实现弹窗的连续显示
+            setTimeout(showPopup, 1000);
+        }
+    }
+
+    // 初始调用弹窗函数
+    showPopup();
+</script>
+
+
 <body>
   <div id="container">
     <div id="wrap">
